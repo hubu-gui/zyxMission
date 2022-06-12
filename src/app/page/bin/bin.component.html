@@ -1,0 +1,106 @@
+<!--
+ * @Author: zyx zyx
+ * @Date: 2022-06-04 09:37:34
+ * @LastEditors: zyx zyx
+ * @LastEditTime: 2022-06-10 14:23:08
+ * @FilePath: /zyxMission-feature-zyx-xinshourenwu/src/app/page/bin/bin.component.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="5" nzRequired nzFor="note">pay_ver</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+        <input id="note" type="text" nz-input formControlName="pay_ver" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="5" nzFor="gender" nzRequired>pay_type</nz-form-label>
+      <nz-form-control [nzSpan]="12" nzErrorTip="Please select your gender!">
+        <nz-select
+          id="gender"
+          formControlName="pay_type"
+          nzPlaceHolder="支付方式"   
+        >
+          <nz-option nzValue="020" nzLabel="支付宝"></nz-option>
+          <nz-option nzValue="010" nzLabel="微信"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">service_id</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="service_id" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">merchant_no</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="merchant_no" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">terminal_id</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="terminal_id" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">terminal_trace</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="terminal_trace" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">terminal_time</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="terminal_time" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">total_fee</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="total_fee" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">order_body</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="order_body" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">notify_url</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="notify_url" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">attach</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="attach" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">goods_detail</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="goods_detail" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="5" nzRequired nzFor="note">key_sign</nz-form-label>
+        <nz-form-control [nzSpan]="12" nzErrorTip="Please input your username!">
+          <input id="note" type="text" nz-input formControlName="key_sign" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzSpan]="12" [nzOffset]="5">
+          <button nz-button nzType="primary"  (click) = "getAxiosData()" >提交请求</button>
+          <nz-modal [(nzVisible)]="isVisible"  (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+            <ng-container *nzModalContent>
+              <ngx-qrcode [value]="value" cssClass="aclass"></ngx-qrcode>
+            </ng-container>
+          </nz-modal> 
+        </nz-form-control>
+      </nz-form-item>
+  </form>
+  

@@ -2,7 +2,7 @@
   <nz-header>
     <div class="logo"></div>
     <ul nz-menu nzTheme="dark" nzMode="horizontal" class="header-menu">
-      <li nz-menu-item nzSelected>nav 1</li>
+      <li nz-menu-item nzSelected >nav 1</li>
       <li nz-menu-item>nav 2</li>
       <li nz-menu-item>nav 3</li>
     </ul>
@@ -12,8 +12,8 @@
       <ul nz-menu nzMode="inline" class="sider-menu">
         <li nz-submenu nzOpen nzIcon="user" nzTitle="subnav 1">
           <ul>
-            <li nz-menu-item nzSelected>option1</li>
-            <li nz-menu-item>option2</li>
+            <li nz-menu-item nzSelected [routerLink]="['/bin']" >option1</li>
+            <li nz-menu-item >option2</li>
             <li nz-menu-item>option3</li>
             <li nz-menu-item>option4</li>
           </ul>
@@ -42,8 +42,13 @@
         <nz-breadcrumb-item>List</nz-breadcrumb-item>
         <nz-breadcrumb-item>App</nz-breadcrumb-item>
       </nz-breadcrumb>
-      <nz-content>Content</nz-content>
+      <nz-content><router-outlet></router-outlet>
+        <app-bin></app-bin></nz-content>
     </nz-layout>
   </nz-layout>
 </nz-layout>
 <label nz-checkbox [(ngModel)]="checked">Checkbox</label>
+
+
+
+

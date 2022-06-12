@@ -1,34 +1,19 @@
+/*
+ * @Author: zyx zyx
+ * @Date: 2022-06-01 07:26:24
+ * @LastEditors: zyx zyx
+ * @LastEditTime: 2022-06-01 23:05:59
+ * @FilePath: /zyxMission-feature-zyx-xinshourenwu/src/app/page/home/home-routing.module.ts
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home.component';
+import { BinComponent } from '../bin/bin.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent,
-    data: { title: '首页' },
-    children: [
-      {
-        path: 'barcodePay',
-        component: HomeComponent,
-        data: {
-          title: '付款码支付',
-          breadcrumb: ['首页', '英雄列表'],
-          animation: 'HeroesPage',
-        },
-      },
-      {
-        path: 'prePay',
-        component: HomeComponent,
-        data: {
-          title: '新增英雄',
-          breadcrumb: ['首页', '英雄列表'],
-          animation: 'HeroesPage',
-        },
-      },
-      { path: '', redirectTo: 'heroes', pathMatch: 'full' },
-      { path: '**', redirectTo: 'heroes' },
-    ],
+    path: 'bin',
+    component: BinComponent,
   },
 ];
 

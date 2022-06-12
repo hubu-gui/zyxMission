@@ -1,0 +1,44 @@
+<!--
+ * @Author: zyx zyx
+ * @Date: 2022-06-01 23:03:06
+ * @LastEditors: zyx zyx
+ * @LastEditTime: 2022-06-01 23:08:29
+ * @FilePath: /zyxMission-feature-zyx-xinshourenwu/src/app/page/barcodePay/barcodePay.component.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<nz-input-group [nzSuffix]="suffixIconSearch">
+    <input type="text" nz-input placeholder="input search text" />
+  </nz-input-group>
+  <ng-template #suffixIconSearch>
+    <i nz-icon nzType="search"></i>
+  </ng-template>
+  <br />
+  <br />
+  <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+    <input type="text" nz-input placeholder="input search text" />
+  </nz-input-group>
+  <ng-template #suffixIconButton>
+    <button nz-button nzType="primary" nzSearch><i nz-icon nzType="search"></i></button>
+  </ng-template>
+  <br />
+  <br />
+  <nz-input-group nzSearch nzSize="large" [nzAddOnAfter]="suffixButton">
+    <input type="text" nz-input placeholder="input search text" />
+  </nz-input-group>
+  <ng-template #suffixButton>
+    <button nz-button nzType="primary" nzSize="large" nzSearch>Search</button>
+  </ng-template>
+
+  <nz-transfer
+      [nzDataSource]="list"
+      [nzDisabled]="disabled"
+      nzShowSearch
+      [nzFilterOption]="filterOption"
+      (nzSearchChange)="search($event)"
+      (nzSelectChange)="select($event)"
+      (nzChange)="change($event)"
+    ></nz-transfer>
+    <div style="margin-top: 8px;">
+      <nz-switch [(ngModel)]="disabled" nzCheckedChildren="disabled" nzUnCheckedChildren="disabled"></nz-switch>
+      <div></div>
+    </div>

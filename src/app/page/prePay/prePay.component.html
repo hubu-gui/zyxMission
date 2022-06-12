@@ -1,0 +1,37 @@
+<!--
+ * @Author: zyx zyx
+ * @Date: 2022-06-01 23:04:19
+ * @LastEditors: zyx zyx
+ * @LastEditTime: 2022-06-01 23:19:18
+ * @FilePath: /zyxMission-feature-zyx-xinshourenwu/src/app/page/prePay/prePay.component.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<a nz-dropdown [nzDropdownMenu]="menu" (nzVisibleChange)="change($event)">
+    Cascading menu
+    <i nz-icon nzType="down"></i>
+  </a>
+  <nz-dropdown-menu #menu="nzDropdownMenu">
+    <ul nz-menu>
+      <li nz-menu-item>1st menu item</li>
+      <li nz-menu-item>2nd menu item</li>
+      <li nz-submenu nzTitle="sub menu">
+        <ul>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item>4th menu item</li>
+        </ul>
+      </li>
+      <li nz-submenu nzDisabled nzTitle="disabled sub menu">
+        <ul>
+          <li nz-menu-item>3rd menu item</li>
+          <li nz-menu-item>4th menu item</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-dropdown-menu>
+
+  <nz-radio-group [(ngModel)]="radioValue" nzName="radiogroup">
+    <label nz-radio nzValue="A">A</label>
+    <label nz-radio nzValue="B">B</label>
+    <label nz-radio nzValue="C">C</label>
+    <label nz-radio nzValue="D">D</label>
+  </nz-radio-group>
